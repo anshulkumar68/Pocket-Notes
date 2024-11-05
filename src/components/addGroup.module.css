@@ -1,0 +1,27 @@
+.container {
+  position: relative;
+}
+.commonText {
+  font-size: 1rem;
+  font-weight: 550;
+  /* line-height: 46.45px; */
+  letter-spacing: 0.035em;
+  /* text-align: left; */
+}
+.textInput {
+  display: flex;
+}
+.textField {
+  border-radius: 0.5rem;
+  border: 2px solid black;
+  margin-left: 4rem;
+}
+.containerPopup {
+  border: 2px solid black;
+  padding: 0.5rem 0.2rem;
+  border-radius: 0.5rem;
+  width: 30rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
