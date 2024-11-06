@@ -95,11 +95,14 @@
 /* ====MEDIA QUERY ==== */
 
 @media only screen and (max-width: 500px){
+    .leftSide{
+        width: 100vw;
+    }
     .rightSide{
         display: none;
     }
     .addButtonContainer{
-        top: 44rem;
+        top: 32rem;
         left: 18rem;
     }
 }
