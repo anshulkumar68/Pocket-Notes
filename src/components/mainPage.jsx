@@ -5,12 +5,18 @@ import { useState } from "react";
 import AddGroup from "./addGroup";
 
 const MainPage = () => {
+  const [notes, setNotes] = useState([]);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const addNote = (note, color) => {
+    setNotes([...notes, { note, color }]); // Add the entered text to notes
+  };
+
   const handleOpenPopup = () => {
     setIsPopupOpen(true);
   };
+
   const handleClosePopup = () => {
-    console.log("overlay pressed");
     setIsPopupOpen(false);
   };
 
@@ -19,6 +25,28 @@ const MainPage = () => {
       <div className={styles.mainContainer}>
         <div className={styles.leftSide}>
           <h2>Pocket Notes</h2>
+          <ul>
+            {notes.map((item, index) => {
+              const { note, color } = item;
+              const nameParts = note.split(" ");
+              const initials = nameParts.length > 1
+                ? `${nameParts[0][0]}${nameParts[1][0]}`.toUpperCase()
+                : nameParts[0][0].toUpperCase();
+
+              return (
+                <li key={index} className={styles.listItems}>
+                  <div className={styles.listItemLogo}
+                    style={{
+                      backgroundColor: color, // Use the selected color
+                    }}
+                  >
+                    {initials}
+                  </div>
+                  <span className={styles.listItemName}>{note}</span>
+                </li>
+              );
+            })}
+          </ul>
           <div className={styles.addButtonContainer}>
             <span className={styles.addButton} onClick={handleOpenPopup}>
               +
@@ -42,7 +70,7 @@ const MainPage = () => {
               Use Pocket Notes on up to 4 linked devices and 1 mobile phone
             </span>
             <div className={styles.privacyContainer}>
-              <img src={privacyPic} alt="privacy image" width={"12rem"}/>
+              <img src={privacyPic} alt="privacy image" width={"12rem"} />
               <span>end-to-end encrypted</span>
             </div>
           </div>
@@ -50,7 +78,7 @@ const MainPage = () => {
       </div>
 
       {/* pop up for add group */}
-      {isPopupOpen && <AddGroup handleClosePopup={handleClosePopup} />}
+      {isPopupOpen && <AddGroup handleClosePopup={handleClosePopup} addNote={addNote} />}
     </>
   );
 };
