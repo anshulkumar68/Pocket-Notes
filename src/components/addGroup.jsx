@@ -4,7 +4,7 @@ const AddGroup = ({ handleClosePopup }) => {
   return (
     <>
       <div className={styles.overlay} onClick={handleClosePopup}>
-        <div className={styles.containerPopup}>
+        <div className={styles.containerPopup}  onClick={(e) => e.stopPropagation()}>
           <span className={styles.commonText}>Create New group</span>
           <p className={`${styles.textInput} ${styles.commonText}`}>
             <span>Group Name</span>

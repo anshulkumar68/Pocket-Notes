@@ -32,10 +32,15 @@
 .textField {
   border-radius: 0.5rem;
   border: 2px solid #cccccc;
-  color: #cccccc;
+  /* color: #cccccc; */
   font-size: 0.8rem;
   margin-left: 2.5rem;
   padding: 0.2rem 0.4rem;
+  outline: none;
+  word-spacing: 1px;
+}
+.textField::placeholder{
+  color: #cccccc;
 }
 .containerPopup {
   padding: 0.8rem 1rem;

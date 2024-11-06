@@ -5,47 +5,66 @@
 }
 /* LEFT SIDE */
 .leftSide{
-    width: 26rem;
+    width: 24rem;
     text-align: center;
     padding-top: 2rem;
-
 }
 /* + button */
 .addButtonContainer{
     position: fixed;
     background: #16008B;
     border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: 36rem;
+    top: 35rem;
     left: 18rem;
 }
 .addButton{
-    color: white;
-    font-size: 4rem;
-    font-weight: 700;
     position: fixed;
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 700;
 }
 
 /* RIGHT SIDE */
 .rightSide{
-    flex-grow: 2;
+    flex-grow: 3;
+    /* min-width: 100vw; */
     background-color: #DAE5F5;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+.rightSideText{
+    display: flex;
+    /* justify-content: space-between; */
+    /* gap: 5rem; */
+    align-items: center;
+    flex-direction: column;
+    max-height: 10rem;
+}
 .bannerImage{
-    width: 38rem;
-    height: 19rem;
+    width: 30rem;
+    height: 15rem;
+    padding-top: 9rem;
 }
 .bannerText{
     color: #292929;
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.bannerText2{
+    padding-bottom: 6rem;
+}
+.privacyContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    gap: 0.3rem;
+    color: #292929;
 }

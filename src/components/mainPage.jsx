@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./mainPage.module.css";
-import { bannerPic } from "../data/data";
+import { bannerPic, privacyPic } from "../data/data";
 import { useState } from "react";
 import AddGroup from "./addGroup";
 
@@ -25,6 +25,7 @@ const MainPage = () => {
             </span>
           </div>
         </div>
+        {/* RIGHT Side */}
         <div className={styles.rightSide}>
           <img
             className={styles.bannerImage}
@@ -32,18 +33,24 @@ const MainPage = () => {
             alt="banner image"
           />
           <h1>Pocket Notes</h1>
-          <span className={styles.bannerText}>
-            Send and receive messages without keeping your phone online.
-          </span>
-          <span className={styles.bannerText}>
-            Use Pocket Notes on up to 4 linked devices and 1 mobile phone
-          </span>
-          <span>end-to-end encrypted</span>
+          <div className={styles.rightSideText}>
+
+            <span className={styles.bannerText}>
+              Send and receive messages without keeping your phone online.
+            </span>
+            <span className={`${styles.bannerText} ${styles.bannerText2}`}>
+              Use Pocket Notes on up to 4 linked devices and 1 mobile phone
+            </span>
+            <div className={styles.privacyContainer}>
+              <img src={privacyPic} alt="privacy image" width={"12rem"}/>
+              <span>end-to-end encrypted</span>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* pop up for add group */}
-      {isPopupOpen && <AddGroup handleClosePopup={handleClosePopup}/>}
+      {isPopupOpen && <AddGroup handleClosePopup={handleClosePopup} />}
     </>
   );
 };

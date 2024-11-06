@@ -1,3 +1,4 @@
 import bannerPic from "../assets/banner.png"
+import privacyPic from "../assets/privacy.png"
 
-export {bannerPic};
+export {bannerPic, privacyPic};
