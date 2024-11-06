@@ -97,12 +97,13 @@
 @media only screen and (max-width: 500px){
     .leftSide{
         width: 100vw;
+        height: 100vh;
     }
     .rightSide{
         display: none;
     }
     .addButtonContainer{
-        top: 32rem;
+        top: 25rem;
         left: 18rem;
     }
 }
