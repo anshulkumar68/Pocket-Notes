@@ -41,8 +41,6 @@
 }
 .rightSideText{
     display: flex;
-    /* justify-content: space-between; */
-    /* gap: 5rem; */
     align-items: center;
     flex-direction: column;
     max-height: 10rem;
@@ -103,7 +101,7 @@
         display: none;
     }
     .addButtonContainer{
-        top: 25rem;
+        top: 30rem;
         left: 18rem;
     }
 }
