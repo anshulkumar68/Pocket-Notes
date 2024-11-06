@@ -1,18 +1,18 @@
 .mainContainer{
     display: flex;
     height: 100vh;
+    position: relative;
 }
 /* LEFT SIDE */
 .leftSide{
     width: 26rem;
-    /* display: flex;
-    justify-content: center; */
     text-align: center;
     padding-top: 2rem;
 
 }
 /* + button */
 .addButtonContainer{
+    position: fixed;
     background: #16008B;
     border-radius: 50%;
     width: 4rem;
@@ -21,8 +21,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 38rem;
-    left: 20rem;
+    top: 36rem;
+    left: 18rem;
 }
 .addButton{
     color: white;
