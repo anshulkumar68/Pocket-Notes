@@ -19,7 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 35rem;
+    bottom: 3rem;
     left: 16rem;
 }
 .addButton{
@@ -33,6 +33,7 @@
 /* RIGHT SIDE */
 .rightSide{
     flex-grow: 3;
+    /* min-width: 75%; */
     background-color: #DAE5F5;
     display: flex;
     flex-direction: column;
