@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./mainPage.module.css";
 import { bannerPic, privacyPic } from "../data/data";
 import { useState } from "react";
@@ -13,8 +13,37 @@ const MainPage = () => {
   const [groupInitial, setGroupInitial] = useState(null);
   const [groupColor, setGroupColor] = useState(null);
 
-  const addNote = (note, color) => {
-    setNotes([...notes, { note, color }]); // Add the entered text to notes
+  //  Load notes from localStorage on mount
+  useEffect(()=>{
+    try{
+      const storedNotes = JSON.parse(localStorage.getItem("notes")) || [];
+      setNotes(storedNotes); // to initialize the state with any previously saved notes
+    }
+    catch(error){
+      console.error("Error loading notes from localstorage", error);
+      setNotes([]); // Fallback to an empty array if there is an error
+    }
+  },[])
+
+  const addNote = (name, color) => {
+    // Check if a note with the same name already exists
+    const existingNote = notes.find(
+      (note) => note.name.toLowerCase() === name.toLowerCase()
+    );
+
+    if (existingNote) {
+      return; // Prevent adding the note
+    }
+
+    try {
+      const newNotes = [...notes, { name, color }]; // Add the entered text to notes
+      setNotes(newNotes);
+
+      // Save updated notes array to localStorage
+      localStorage.setItem("notes", JSON.stringify(newNotes));
+    } catch (error) {
+      console.error("Error saving notes to localStorage:", error);
+    }
   };
 
   // to handle open pop-up
@@ -22,19 +51,23 @@ const MainPage = () => {
     setIsPopupOpen(true);
   };
 
-  // to handle close pop-up 
+  // to handle close pop-up
   const handleClosePopup = () => {
     setIsPopupOpen(false);
   };
 
   // to handle display group details
-  const handleShowDetails = (initials, note, color) => {
+  const handleShowDetails = (initials, name, color) => {
     setShowDetails(!showDetails); // toggle state
-    setGroupName(note);
+    setGroupName(name);
     setGroupColor(color);
     setGroupInitial(initials);
   };
 
+  // save user
+  const saveUser = () => {
+    localStorage.setItem("user");
+  };
 
   return (
     <>
@@ -43,8 +76,8 @@ const MainPage = () => {
           <h2>Pocket Notes</h2>
           <ul>
             {notes.map((item, index) => {
-              const { note, color } = item;
-              const nameParts = note.split(" ");
+              const { name, color } = item;
+              const nameParts = name.split(" ");
               const initials =
                 nameParts.length > 1
                   ? `${nameParts[0][0]}${nameParts[1][0]}`.toUpperCase()
@@ -53,9 +86,9 @@ const MainPage = () => {
               return (
                 <>
                   <li
-                    key={index}
+                    key={name}
                     className={styles.listItems}
-                    onClick={() => handleShowDetails(initials, note, color)}
+                    onClick={() => handleShowDetails(initials, name, color)}
                   >
                     <div
                       className={styles.listItemLogo}
@@ -65,7 +98,7 @@ const MainPage = () => {
                     >
                       {initials}
                     </div>
-                    <span className={styles.listItemName}>{note}</span>
+                    <span className={styles.listItemName}>{name}</span>
                   </li>
                 </>
               );
