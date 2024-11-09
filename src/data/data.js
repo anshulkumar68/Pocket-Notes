@@ -1,5 +1,6 @@
-import bannerPic from "../assets/banner.png"
-import privacyPic from "../assets/privacy.png"
-import sendArrowPic from "../assets/sendArrow.png"
+import bannerPic from "../assets/banner.png";
+import privacyPic from "../assets/privacy.png";
+import sendDisablePic from "../assets/sendDisable.png";
+import sendEnablePic from "../assets/sendEnable.png";
 
-export {bannerPic, privacyPic, sendArrowPic};
+export { bannerPic, privacyPic, sendDisablePic, sendEnablePic };

@@ -86,7 +86,7 @@ const MainPage = () => {
               return (
                 <>
                   <li
-                    key={name}
+                    key={`${name}-${color}`}
                     className={styles.listItems}
                     onClick={() => handleShowDetails(initials, name, color)}
                   >
@@ -104,10 +104,13 @@ const MainPage = () => {
               );
             })}
           </ul>
+          <div>
           <div className={styles.addButtonContainer}>
             <span className={styles.addButton} onClick={handleOpenPopup}>
               +
             </span>
+          </div>
+
           </div>
         </div>
 

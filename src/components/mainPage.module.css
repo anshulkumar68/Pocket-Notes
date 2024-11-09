@@ -1,13 +1,14 @@
 .mainContainer{
     display: flex;
     height: 100vh;
-    position: relative;
 }
 /* LEFT SIDE */
 .leftSide{
-    width: 22rem;
+    width: 25%;
     text-align: center;
     padding-top: 0.5rem;
+    overflow-y: auto;
+    position: relative;
 }
 /* + button */
 .addButtonContainer{
@@ -20,7 +21,8 @@
     justify-content: center;
     align-items: center;
     bottom: 3rem;
-    left: 16rem;
+    left: 18rem;
+    cursor: pointer;
 }
 .addButton{
     position: fixed;
@@ -32,8 +34,8 @@
 
 /* RIGHT SIDE */
 .rightSide{
-    flex-grow: 3;
-    /* min-width: 75%; */
+    /* flex-grow: 3; */
+    min-width: 75%;
     background-color: #DAE5F5;
     display: flex;
     flex-direction: column;
@@ -71,6 +73,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
+    
 }
 .listItemLogo{
     width: 40px;

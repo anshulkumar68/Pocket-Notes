@@ -3,9 +3,9 @@
   flex-direction: column;
   background: #dae5f5;
   height: 100vh;
-  /* width: 75%; */
-  flex-grow: 10;
+  width: 75%;
   justify-content: space-between;
+  
 }
 
 /* ==TOP== */
@@ -13,6 +13,7 @@
   height: 4rem;
   background: #001f8b;
   color: white;
+  /* width: 100%; */
 }
 
 .groupDetailsContainer {
@@ -52,14 +53,27 @@
   display: flex;
   overflow-wrap: break-word; /* Allows long words to break and wrap */
   word-break: break-word; /* Ensures long words break within container */
+  flex-direction: column;
 }
 .note {
-  /* flex: 1; */
   padding: 0.5rem;
   font-size: 0.9rem;
   white-space: normal; /* Allows text to wrap to the next line */
   overflow-wrap: break-word; /* Breaks long words to prevent overflow */
   word-break: break-word; /* Breaks words if they're too long for the container */
+}
+.noteArea{
+  display: flex;
+  flex-direction:column;
+  flex-grow: 1;
+  overflow-y: auto; 
+}
+.noteDateTime{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.7rem;
+  font-weight: 550;
+  padding-top: 0.4rem;
 }
 
 /* ==BOTTOM== */
@@ -68,15 +82,14 @@
   padding: 0.8rem;
   display: flex;
   align-items: center;
-  position: relative; /* Make sure the position is set so that absolute positioning works for .sendMessage */
+  max-width: 100vw; 
   textarea {
-    flex: 1; /* Make textarea take all available width within the container */
-    height: 7rem; /* Set a specific height to make it visible */
+    height: 7rem; 
     border-radius: 0.5rem;
     border: none;
     outline: none;
     resize: none;
-    max-width: 96%;
+    width: 100%;
     padding: 1rem;
     font-size: 1.1rem;
     letter-spacing: -0.1px;
@@ -87,9 +100,10 @@
     font-weight: 600;
   }
 }
-.sendMessage {
+.sendButton {
   width: 1.8rem;
   position: absolute;
   bottom: 2rem;
   right: 2rem;
+  color: #001f8b;
 }

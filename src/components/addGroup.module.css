@@ -59,6 +59,9 @@
 .colorPlateContainer {
   display: flex;
 }
+.borderColor {
+  border: 2px solid black; /* Adds a black border */
+}
 .color1 {
   background: #b38bfa;
   width: 1.4rem;
@@ -67,7 +70,8 @@
   place-self: center;
   margin: 0 0.2rem;
   margin-left: 2.5rem;
-  border-style: none;
+  border: none;
+  cursor: pointer;
 }
 .color2 {
   background: #ff79f2;
@@ -76,7 +80,8 @@
   border-radius: 50%;
   place-self: center;
   margin: 0 0.2rem;
-  border-style: none;
+  border: none;
+  cursor: pointer;
 }
 .color3 {
   background: #43e6fc;
@@ -85,7 +90,8 @@
   border-radius: 50%;
   place-self: center;
   margin: 0 0.2rem;
-  border-style: none;
+  border: none;
+  cursor: pointer;
 }
 .color4 {
   background: #f19576;
@@ -94,7 +100,8 @@
   border-radius: 50%;
   place-self: center;
   margin: 0 0.2rem;
-  border-style: none;
+  border: none;
+  cursor: pointer;
 }
 .color5 {
   background: #0047ff;
@@ -103,7 +110,8 @@
   border-radius: 50%;
   place-self: center;
   margin: 0 0.2rem;
-  border-style: none;
+  border: none;
+  cursor: pointer;
 }
 .color6 {
   background: #6691ff;
@@ -112,7 +120,8 @@
   border-radius: 50%;
   place-self: center;
   margin: 0 0.2rem;
-  border-style: none;
+  border: none;
+  cursor: pointer;
 }
 
 
