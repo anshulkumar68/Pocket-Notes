@@ -3,7 +3,7 @@
   flex-direction: column;
   background: #dae5f5;
   height: 100vh;
-  width: 75%;
+  width: 77.5%;
   justify-content: space-between;
   
 }
@@ -49,7 +49,7 @@
   padding: 1rem;
   border-radius: 8px;
   margin: 0.5rem 1rem;
-  max-width: 94%; /* Restrict width on larger screens */
+  max-width: 96%; /*Restrict width on larger screens*/
   display: flex;
   overflow-wrap: break-word; /* Allows long words to break and wrap */
   word-break: break-word; /* Ensures long words break within container */
@@ -57,7 +57,7 @@
 }
 .note {
   padding: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   white-space: normal; /* Allows text to wrap to the next line */
   overflow-wrap: break-word; /* Breaks long words to prevent overflow */
   word-break: break-word; /* Breaks words if they're too long for the container */
@@ -91,13 +91,12 @@
     resize: none;
     width: 100%;
     padding: 1rem;
-    font-size: 1.1rem;
-    letter-spacing: -0.1px;
-    word-spacing: -0.2rem;
+    font-size: 1rem;
   }
   textarea::placeholder {
     font-size: 1.1rem;
     font-weight: 600;
+    letter-spacing: 0.1rem;
   }
 }
 .sendButton {

@@ -22,8 +22,8 @@ const AddGroup = ({ handleClosePopup, addNote }) => {
           onClick={(e) => e.stopPropagation()}
         >
           <span className={styles.commonText}>Create New group</span>
-          <p className={`${styles.textInput} ${styles.commonText}`}>
-            <span>Group Name</span>
+          <p className={styles.textInput}>
+            <span className={styles.commonText}>Group Name</span>
             <input
               className={styles.textField}
               type="text"

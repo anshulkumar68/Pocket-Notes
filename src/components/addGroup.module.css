@@ -4,7 +4,7 @@
   background-color: white;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
-  line-height: 1.3rem;
+  /* line-height: 1.3rem; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,18 +23,20 @@
   font-size: 0.8rem;
   font-weight: 550;
   letter-spacing: 0.035em;
+  line-height: 2.4rem;
 }
 .textInput {
   display: flex;
 }
 .textField {
-  border-radius: 0.5rem;
-  border: 2px solid #cccccc;
-  font-size: 0.8rem;
-  margin-left: 2.5rem;
-  padding: 0.2rem 0.4rem;
-  outline: none;
-  word-spacing: 1px;
+    border-radius: 0.8rem;
+    border: 2px solid #cccccc;
+    font-size: 0.8rem;
+    margin-left: 2rem;
+    padding: 0rem 0.4rem;
+    outline: none;
+    word-spacing: 1px;
+    width: 64%;
 }
 .textField::placeholder{
   color: #cccccc;
@@ -69,7 +71,7 @@
   border-radius: 50%;
   place-self: center;
   margin: 0 0.2rem;
-  margin-left: 2.5rem;
+  margin-left: 1.6rem;
   border: none;
   cursor: pointer;
 }

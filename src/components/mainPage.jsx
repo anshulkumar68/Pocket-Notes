@@ -12,18 +12,18 @@ const MainPage = () => {
   const [groupName, setGroupName] = useState(null);
   const [groupInitial, setGroupInitial] = useState(null);
   const [groupColor, setGroupColor] = useState(null);
+  const [selectedGroup, setSelectedGroup] = useState("");
 
   //  Load notes from localStorage on mount
-  useEffect(()=>{
-    try{
+  useEffect(() => {
+    try {
       const storedNotes = JSON.parse(localStorage.getItem("notes")) || [];
       setNotes(storedNotes); // to initialize the state with any previously saved notes
-    }
-    catch(error){
+    } catch (error) {
       console.error("Error loading notes from localstorage", error);
       setNotes([]); // Fallback to an empty array if there is an error
     }
-  },[])
+  }, []);
 
   const addNote = (name, color) => {
     // Check if a note with the same name already exists
@@ -58,10 +58,14 @@ const MainPage = () => {
 
   // to handle display group details
   const handleShowDetails = (initials, name, color) => {
-    setShowDetails(!showDetails); // toggle state
-    setGroupName(name);
-    setGroupColor(color);
-    setGroupInitial(initials);
+    if (selectedGroup === name) {
+      setShowDetails(!showDetails); // toggle state
+    } else {
+      setGroupName(name);
+      setGroupColor(color);
+      setGroupInitial(initials);
+      setSelectedGroup(name);
+    }
   };
 
   // save user
@@ -89,6 +93,10 @@ const MainPage = () => {
                     key={`${name}-${color}`}
                     className={styles.listItems}
                     onClick={() => handleShowDetails(initials, name, color)}
+                    style={{
+                      backgroundColor:
+                        selectedGroup === name ? "#e5e5e5" : "white",
+                    }}
                   >
                     <div
                       className={styles.listItemLogo}
@@ -104,13 +112,12 @@ const MainPage = () => {
               );
             })}
           </ul>
-          <div>
-          <div className={styles.addButtonContainer}>
-            <span className={styles.addButton} onClick={handleOpenPopup}>
-              +
-            </span>
-          </div>
-
+          <div className={styles.addButtonContainer1}>
+            <div className={styles.addButtonContainer}>
+              <span className={styles.addButton} onClick={handleOpenPopup}>
+                +
+              </span>
+            </div>
           </div>
         </div>
 
@@ -132,13 +139,15 @@ const MainPage = () => {
               alt="banner image"
             />
             <h1>Pocket Notes</h1>
-            <div className={styles.rightSideText}>
+            <div className={styles.rightSideTextContainer}>
+              <div className={styles.noteLineContainer}>
               <span className={styles.bannerText}>
                 Send and receive messages without keeping your phone online.
               </span>
               <span className={`${styles.bannerText} ${styles.bannerText2}`}>
                 Use Pocket Notes on up to 4 linked devices and 1 mobile phone
               </span>
+              </div>
               <div className={styles.privacyContainer}>
                 <img src={privacyPic} alt="privacy image" width={"12rem"} />
                 <span>end-to-end encrypted</span>

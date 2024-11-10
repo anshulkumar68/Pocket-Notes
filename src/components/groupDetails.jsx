@@ -5,7 +5,6 @@ import { sendDisablePic, sendEnablePic } from "../data/data";
 const GroupDetails = ({ groupName, groupColor, groupInitial }) => {
   const [currentNote, setCurrentNote] = useState("");
   const [noteArea, setNoteArea] = useState([]);
-  const [sendButton, setSendButton] = useState("");
 
   // Function to get notes for the specific group from local storage
   useEffect(() => {
