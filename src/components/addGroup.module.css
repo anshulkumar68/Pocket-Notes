@@ -33,7 +33,7 @@
     border: 2px solid #cccccc;
     font-size: 0.8rem;
     margin-left: 2rem;
-    padding: 0rem 0.4rem;
+    padding: 0rem 0.6rem;
     outline: none;
     word-spacing: 1px;
     width: 64%;
@@ -131,10 +131,17 @@
 
 @media only screen and (max-width: 550px){
   .containerPopup{
-    width: 18rem;
+    width: 19rem;
+  }
+  .commonText{
+    font-size: 0.7rem;
+  font-weight: 550;
+  letter-spacing: 0.035rem;
+  line-height: 2rem;
   }
   .textField{
-    margin-left: 1rem;
+    margin-left: 1.3rem;
+    /* margin-bottom: 0.5rem; */
   }
   .color1{
     margin-left: 1rem;

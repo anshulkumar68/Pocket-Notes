@@ -41,6 +41,11 @@
   font-size: 1rem;
   font-weight: 600;
 }
+.backButton{
+  padding-right: 0.7rem;
+  font-weight: 700;
+  width: 2rem;
+}
 
 /* ==MIDDLE== */
 .noteContainer {
@@ -112,5 +117,9 @@
 @media only screen and (max-width: 500px){
     .detailsContainer{
         width: 100%;
+    }
+    .detailsBottom textarea::placeholder {
+      letter-spacing: 0rem;
+      font-size: 0.9rem;
     }
 }

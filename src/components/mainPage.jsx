@@ -59,20 +59,54 @@ const MainPage = () => {
 
   const handleShowDetails = (initials, name, color) => {
     if (selectedGroup === name) {
-      setShowDetails(!showDetails);
+      // Temporarily set selectedGroup to null to trigger re-render
+      setSelectedGroup(null);
+      // Use a short timeout to set selectedGroup back to the desired group
+      setTimeout(() => {
+        setGroupName(name);
+        setGroupColor(color);
+        setGroupInitial(initials);
+        setSelectedGroup(name);
+        setShowDetails(true);
+      }, 0);
     } else {
       setGroupName(name);
       setGroupColor(color);
       setGroupInitial(initials);
       setSelectedGroup(name);
       setShowDetails(true);
-
-      // Hide left side on mobile view
-      if (isMobileView) {
-        document.querySelector(`.${styles.leftSide}`).style.display = "none";
-      }
+    }
+  
+    // Hide left side on mobile view
+    if (isMobileView) {
+      document.querySelector(`.${styles.leftSide}`).style.display = "none";
     }
   };
+
+  // const handleShowDetails = (initials, name, color) => {
+  //   if (selectedGroup === name) {
+  //     setShowDetails(!showDetails);
+  //   } else {
+  //     setGroupName(name);
+  //     setGroupColor(color);
+  //     setGroupInitial(initials);
+  //     setSelectedGroup(name);
+  //     setShowDetails(true);
+
+  //     // Hide left side on mobile view
+  //     if (isMobileView) {
+  //       document.querySelector(`.${styles.leftSide}`).style.display = "none";
+  //     }
+  //   }
+  // };
+
+  // to handle back button
+  const handleBackButtonClick = () => {
+    setShowDetails(false);
+    if (isMobileView) {
+      document.querySelector(`.${styles.leftSide}`).style.display = "block";
+    }
+  }; 
 
   return (
     <>
@@ -123,6 +157,8 @@ const MainPage = () => {
             groupName={groupName}
             groupColor={groupColor}
             groupInitial={groupInitial}
+            handleBackButtonClick={handleBackButtonClick}
+            isMobileView={isMobileView}
           />
         ) : (
           <div className={styles.rightSide}>

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styles from "./groupDetails.module.css";
-import { sendDisablePic, sendEnablePic } from "../data/data";
+import { backPic, sendDisablePic, sendEnablePic } from "../data/data";
 
-const GroupDetails = ({ groupName, groupColor, groupInitial }) => {
+
+const GroupDetails = ({ groupName, groupColor, groupInitial, handleBackButtonClick, isMobileView }) => {
   const [currentNote, setCurrentNote] = useState("");
   const [noteArea, setNoteArea] = useState([]);
 
@@ -55,6 +56,9 @@ const GroupDetails = ({ groupName, groupColor, groupInitial }) => {
     <div className={styles.detailsContainer}>
       <div className={styles.detailsTop}>
         <div className={styles.groupDetailsContainer}>
+        {isMobileView && (
+          <img src={backPic} className={styles.backButton} alt="back button" onClick={handleBackButtonClick} />
+        )}
           <div
             className={styles.listItemLogo}
             style={{
