@@ -95,7 +95,7 @@ const MainPage = () => {
     <>
       <div className={styles.mainContainer}>
         <div className={styles.leftSide}>
-          <h2>Pocket Notes</h2>
+          <h1 className={styles.header}>Pocket Notes</h1>
           <ul>
             {notes.map((item, index) => {
               const { name, color } = item;
