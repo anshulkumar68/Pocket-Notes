@@ -28,7 +28,7 @@
     bottom: 5rem;
 }
 .addButtonContainer {
-    position: fixed; 
+    position: absolute; 
     bottom: 4rem;
     right: 2rem; 
     background: #16008B;
@@ -40,7 +40,6 @@
     align-items: center;
     padding: 0;
     margin: 0;
-    line-height: 1;
     cursor: pointer;
     box-shadow: inset -1px 1px 11px 0px #00000059;
     font-size: 3rem;
@@ -49,7 +48,8 @@
     user-select: none;
 }
 .addButton {
-    /* position: fixed; */
+    position: absolute;
+    line-height: 1;
     font-size: 3rem;
     color: white;
     font-weight: 700;
