@@ -126,14 +126,15 @@ const MainPage = () => {
               );
             })}
           </ul>
-
-          {/* <div className={styles.addButtonContainer}>
-            <p className={styles.addButton} onClick={handleOpenPopup}>
-              +
+          <div className={styles.addButtonContainer1}>
+            <p className={styles.addButtonContainer}>
+              <p className={styles.addButton} onClick={handleOpenPopup}>
+                +
+              </p>
             </p>
-          </div> */}
+          </div>
 
-          <div className={styles.addButtonContainer}>+</div>
+          {/* <div className={styles.addButtonContainer}>+</div> */}
         </div>
 
         {showDetails ? (

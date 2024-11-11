@@ -19,20 +19,31 @@
     }
 }
 
+.addButtonContainer1{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 3rem;
+    bottom: 5rem;
+}
 .addButtonContainer {
     position: fixed; 
-    bottom: 4rem;
-    right: 2rem; 
+    /* bottom: 4rem;
+    right: 2rem;  */
     background: #16008B;
     border-radius: 50%;
     width: 3.5rem;
     height: 3.5rem;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     cursor: pointer;
     box-shadow: inset -1px 1px 11px 0px #00000059;
-     font-size: 3rem;
+}
+.addButton {
+    /* position: fixed; */
+    font-size: 3rem;
     color: white;
     font-weight: 700;
     user-select: none;
