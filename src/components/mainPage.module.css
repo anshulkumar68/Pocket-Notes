@@ -32,9 +32,7 @@
     align-items: center;
     cursor: pointer;
     box-shadow: inset -1px 1px 11px 0px #00000059;
-}
-.addButton {
-    font-size: 3rem;
+     font-size: 3rem;
     color: white;
     font-weight: 700;
     user-select: none;
