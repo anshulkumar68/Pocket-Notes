@@ -126,15 +126,8 @@ const MainPage = () => {
               );
             })}
           </ul>
-          <div className={styles.addButtonContainer1}>
-            <div className={styles.addButtonContainer}>
-              <p className={styles.addButton} onClick={handleOpenPopup}>
-                +
-              </p>
-            </div>
-          </div>
 
-          {/* <div className={styles.addButtonContainer}>+</div> */}
+          <div className={styles.addButtonContainer}>+</div>
         </div>
 
         {showDetails ? (

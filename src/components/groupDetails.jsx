@@ -89,7 +89,7 @@ const GroupDetails = ({ groupName, groupColor, groupInitial, handleBackButtonCli
           onKeyDown={handleKeyDown} // Detect Enter key press
           onChange={(e) => setCurrentNote(e.target.value)}
         />
-        {/* <p className={styles.sendButtonContainer}> */}
+      
         <img
           className={styles.sendButton}
           src={currentNote.trim() ? sendEnablePic : sendDisablePic}
@@ -97,7 +97,7 @@ const GroupDetails = ({ groupName, groupColor, groupInitial, handleBackButtonCli
           alt="send message arrow"
           onClick={handleAddNote}
         />
-        {/* </p> */}
+      
       </div>
     </div>
   );
