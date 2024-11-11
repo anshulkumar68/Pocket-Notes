@@ -128,9 +128,9 @@ const MainPage = () => {
           </ul>
             
           <div className={styles.addButtonContainer}>
-            <span className={styles.addButton} onClick={handleOpenPopup}>
+            <p className={styles.addButton} onClick={handleOpenPopup}>
               +
-            </span>
+            </p>
           </div>
 
         </div>
