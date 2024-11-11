@@ -21,8 +21,8 @@
 
 .addButtonContainer1{
     position: absolute;
-    right: 5rem;
-    bottom: 14rem;
+    right: 6rem;
+    bottom: 13rem;
 }
 .addButtonContainer {
    position: fixed;
@@ -132,7 +132,7 @@
 
 @media only screen and (max-width: 650px) {
     .header{
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
     .leftSide {
         width: 100vw;
