@@ -10,7 +10,6 @@
     padding-top: 0.5rem;
     overflow-y: auto;
     position: relative;
-
     h2 {
         font-size: 2rem;
         font-weight: 700;
@@ -20,18 +19,20 @@
 }
 
 /* ==+button== */
-.addButtonContainer1 {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 6rem;
-    right: 5rem;
-}
+    /* .addButtonContainer1 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        bottom: 6rem;
+        right: 5rem;
+    } */
 
 .addButtonContainer {
-    /* position: fixed; */
-    /* bottom: 1rem; */
+    position: sticky; /* Fixed to make it stay in the same position when scrolling */
+    right: -3rem; /* Distance from the right side */
+    bottom: 3rem; /* Distance from the bottom */
     background: #16008B;
     border-radius: 50%;
     width: 3.5rem;
@@ -132,16 +133,16 @@
 @media only screen and (max-width: 500px) {
     .leftSide {
         width: 100vw;
-        height: 100vh;
+        /* height: 100vh; */
+        height: 100%;
     }
 
     .rightSide {
         display: none;
     }
-
     .addButtonContainer {
-        top: 34rem;
-        left: 18rem;
+        /* top: 34rem;
+        left: 18rem; */
     }
 
     .detailsContainer {
