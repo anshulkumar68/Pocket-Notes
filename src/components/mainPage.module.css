@@ -28,7 +28,7 @@
    position: fixed;
     background-color: #16008B; /* Set the background color here */
     bottom: 5rem;
-    left: 13rem;
+    left: 18rem;
     border-radius: 50%;
     width: 3.5rem;
     height: 3.5rem;
@@ -135,8 +135,8 @@
         font-size: 3.5rem;
     }
     .leftSide {
-        width: 100dvw;
-        height: 100dvh;
+        width: 100vw;
+        height: 100vh;
         /* height: 100vh; */
     }
 
