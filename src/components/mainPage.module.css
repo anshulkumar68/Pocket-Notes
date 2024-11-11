@@ -31,17 +31,6 @@
     } */
 
 .addButtonContainer {
-    /* position: absolute; 
-    right: 2rem;
-    bottom: 3rem;
-    background: #16008B;
-    border-radius: 50%;
-    width: 3.5rem;
-    height: 3.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer; */
     position: fixed; /* Sticky positioning */
     bottom: 4rem; /* Distance from the bottom of .leftSide */
     right: 2rem; /* Adjust if needed to position correctly */
@@ -60,7 +49,6 @@
 }
 
 .addButton {
-    /* position: fixed; */
     color: white;
     font-size: 3.5rem;
     font-weight: 700;
@@ -157,9 +145,8 @@
     .rightSide {
         display: none;
     }
-    .addButtonContainer {
-        /* top: 34rem;
-        left: 18rem; */
+    .addButton{
+        padding-bottom: 2px;
     }
 
     .detailsContainer {
