@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   background: #dae5f5;
-  height: 100vh;
+  height: 100%;
   width: 77.5%;
   justify-content: space-between;
   
@@ -13,7 +13,6 @@
   height: 4rem;
   background: #001f8b;
   color: white;
-  /* width: 100%; */
 }
 
 .groupDetailsContainer {
@@ -70,7 +69,7 @@
 .noteArea{
   display: flex;
   flex-direction:column;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   overflow-y: auto; 
 }
 .noteDateTime{
@@ -97,6 +96,7 @@
     width: 100%;
     padding: 1rem;
     font-size: 1rem;
+    position: relative;
   }
   textarea::placeholder {
     font-size: 1.1rem;
@@ -114,7 +114,7 @@
 
 
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 650px){
     .detailsContainer{
         width: 100%;
     }

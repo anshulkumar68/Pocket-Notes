@@ -129,7 +129,7 @@
 
 /* ====MEDIA QUERY ==== */
 
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 650px){
   .containerPopup{
     width: 19rem;
   }

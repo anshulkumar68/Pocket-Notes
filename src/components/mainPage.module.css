@@ -19,22 +19,11 @@
     }
 }
 
-/* ==+button== */
-    /* .addButtonContainer1 {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: red;
-        bottom: 6rem;
-        right: 5rem;
-    } */
-
 .addButtonContainer {
-    position: fixed; /* Sticky positioning */
-    bottom: 4rem; /* Distance from the bottom of .leftSide */
-    right: 2rem; /* Adjust if needed to position correctly */
-    margin-left: auto; /* Center it horizontally within the container */
+    position: fixed; 
+    bottom: 4rem;
+    right: 2rem; 
+    
     background: #16008B;
     border-radius: 50%;
     width: 3.5rem;
@@ -43,9 +32,6 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    color: white;
-    font-size: 2rem;
-    font-weight: 700;
 }
 
 .addButton {
@@ -134,7 +120,7 @@
 
 /* ==MEDIA QUERY== */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 650px) {
     .leftSide {
         width: 100vw;
         /* height: 100vh; */
