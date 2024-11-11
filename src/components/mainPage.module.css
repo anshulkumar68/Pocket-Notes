@@ -30,8 +30,8 @@
 .addButtonContainer {
    position: fixed;
     background-color: #16008B; /* Set the background color here */
-    /* bottom: 5rem;
-    right: 3rem; */
+    bottom: 5rem;
+    right: 3rem;
     border-radius: 50%;
     width: 3.5rem;
     height: 3.5rem;
