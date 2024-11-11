@@ -86,7 +86,7 @@
   padding: 0.8rem;
   display: flex;
   align-items: center;
-  max-width: 100vw; 
+  max-width: 100%; 
   position: relative;
   textarea {
     height: 7rem; 
