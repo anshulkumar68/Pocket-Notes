@@ -127,7 +127,7 @@ const MainPage = () => {
             })}
           </ul>
 
-          <div className={styles.addButtonContainer}>+</div>
+          <div className={styles.addButtonContainer} onClick={handleOpenPopup}>+</div>
         </div>
 
         {showDetails ? (
