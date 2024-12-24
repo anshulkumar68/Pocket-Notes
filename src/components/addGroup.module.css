@@ -2,9 +2,6 @@
   position: absolute;
   height: 100vh;
   background-color: white;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
-  /* line-height: 1.3rem; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,10 +11,7 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(2px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
+  z-index: 10;
 }
 .commonText {
   font-size: 0.8rem;
